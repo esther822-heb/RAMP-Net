@@ -16,7 +16,7 @@ This repository contains the official implementation of **RAMP-Net**, a novel re
 * **Superior Performance Across Diverse Regions and Missing Scenarios:**  Extensive experiments over Guangdong (China) and California (USA) demonstrate that RAMP-Net consistently outperforms state-of-the-art baselines, particularly under high missing rates and extreme weather conditions.
 
 ### 🏗️ Model Architecture
-[//]: # "![Model Architecture]&#40;docs/assets/model_architecture.png&#41;"
+[//]: # "![Model Architecture]&#40;docs/Overall Framework.png&#41;"
 <p align="center">
   <img src="docs/Overall Framework.png" width="900" alt="Model Architecture">
 </p>

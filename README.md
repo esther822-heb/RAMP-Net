@@ -66,6 +66,7 @@ This repository contains the official implementation of **RAMP-Net**, a novel re
 │   ├── mask_rate/          # Missing-value mask files
 │   ├── models/             # RAMP-Net and baseline implementations
 │   ├── scaler/             # Normalization statistics and result files
+│   ├── scripts/            # All running scripts
 │   ├── utils/              # Utility functions
 │   ├── run.py              # Multi-station experiment entry
 │   └── run_s.py            # Single-station experiment entry

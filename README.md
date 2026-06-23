@@ -181,7 +181,7 @@ Bold: best model; italic: second-best model.
 | California| P    | 75%          | MAE    | 1.156 ± 0.000 | 0.522 ± 0.001 | 1.215 ± 0.027 | **0.334** ± 0.001      | *0.389* ± 0.003        | 1.040 ± 0.162                | 0.417 ± 0.014                |
 | California| P    | 75%          | $R^2$  | 0.924 ± 0.000 | 0.974 ± 0.000 | 0.865 ± 0.006 | **0.988** ± 0.000      | 0.984 ± 0.001          | 0.918 ± 0.023                | *0.985* ± 0.001               |
 ### Table 2: Bin-wise performance evaluation (in MAE) of imputation methods across wind-speed regimes under different missing rates.
-| Dataset   | Var. | Missing rate | Speed (m/s)   | OK                | LR                 | Autoformer         | NS-Trans           | TimesNet           | MPNN               | RAMP-Net (Ours)    |
+| Dataset   | Var. | Missing<br>rate| Speed (m/s)   | OK                | LR                 | Autoformer         | NS-Trans           | TimesNet           | MPNN               | RAMP-Net (Ours)    |
 | --------- | ---- | ------------ | ------------- | ----------------- | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
 | Guangdong | U    | 50%          | $10 \sim 12.5$| 3.645 ± 0.034     | 3.149 ± 0.037      | 2.100 ± 0.084      | 2.121 ± 0.083      | *2.007* ± 0.112    | 2.071 ± 0.085      | **1.853** ± 0.088  |
 | Guangdong | U    | 50%          | $12.5 \sim 15$| 6.740 ± 0.127     | 5.125 ± 0.156      | 2.975 ± 0.217      | 3.022 ± 0.141      | *2.837* ± 0.181    | 2.975 ± 0.184      | **2.666** ± 0.165  |

@@ -111,7 +111,8 @@ Training is performed using model-specific shell scripts. You can find all train
 **Important:** You must navigate to the `code/` directory before executing these scripts to ensure the environment is correctly set up. To train a model, use the following commands:
 
 ## 📈 Experimental Results
-### Table 1: verage quantitative evaluation results of RAMP-Net and existing methods under different missing rates
+Bold: best model; italic: second-best model.
+### Table 1: Average quantitative evaluation results of RAMP-Net and existing methods under different missing rates
 | Dataset   | Var. | Missing rate | Metric | OK            | LR            | Autoformer    | NS-Trans               | TimesNet               | MPNN                         | RAMP-Net (Ours)              |
 | --------- | ---- | ------------ | ------ | ------------- | ------------- | ------------- | ---------------------- | ---------------------- | ---------------------------- | ---------------------------- |
 | Guangdong | U    | 12.5%        | MAE    | 1.237 ± 0.002 | 1.074 ± 0.002 | 0.556 ± 0.002 | 0.526 ± 0.001          | 0.498 ± 0.004          | *0.491* ± 0.002               | **0.372** ± 0.005            |

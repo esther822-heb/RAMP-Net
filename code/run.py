@@ -1,13 +1,9 @@
 import os
 os.environ['CUBLAS_WORKSPACE_CONFIG'] = ':4096:8'
 os.environ['PYTORCH_DETERMINISTIC'] = '1'
-print("✅ 正在运行 run.py 文件：", __file__)
-
-# ----------- 必须最顶部设定全局seed：-------------
 import argparse
 import wandb
 parser = argparse.ArgumentParser(description='MPNN')
-# ... 这里保留你的各种 parser.add_argument ...（如原代码）
 parser.add_argument('--seed', type=int, default=2024, help='random seed for full reproducibility')
 parser.add_argument('--k', type=int, default=4, help='spatial neighbor count')
 parser.add_argument('--node', type=int, default=0, help='node ')
@@ -111,14 +107,12 @@ parser.add_argument('--jitter', default=False, action="store_true", help="Jitter
 parser.add_argument('--scaling', default=False, action="store_true", help="Scaling preset augmentation")
 
 
-# TimeXer
 parser.add_argument('--patch_len', type=int, default=16, help='patch length')
-# 动态参数
 parser.add_argument('--root_path', type=str, default='./all_data', help='root path of the data file')
 parser.add_argument('--data_path', type=str, default='72595524259.csv', help='data file')
-parser.add_argument('--start_itr', type=int, default=0, help='从第几个实验开始')
-parser.add_argument('--resume', action='store_true', help='从断点恢复训练')
-parser.add_argument('--resume_epoch', type=int, default=0, help='从指定epoch恢复（配合--resume使用）')
+parser.add_argument('--start_itr', type=int, default=0, help='experiment')
+parser.add_argument('--resume', action='store_true', help='resume')
+parser.add_argument('--resume_epoch', type=int, default=0, help='epoch--resume')
 args = parser.parse_args()
 
 BASE_SEED = args.seed
@@ -143,15 +137,10 @@ if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
     torch.mps.manual_seed(BASE_SEED)
 
 from exp.exp_imputation import Exp_Imputation
-from exp.exp_long_term_forecasting import Exp_Long_Term_Forecast
-from exp.exp_short_term_forecasting import Exp_Short_Term_Forecast
-from exp.exp_anomaly_detection import Exp_Anomaly_Detection
-from exp.exp_classification import Exp_Classification
 from utils.print_args import print_args
 
 if __name__ == '__main__':
 
-    print(f"掩码率{args.mask_rate}")
     if torch.cuda.is_available() and args.use_gpu:
         args.device = torch.device('cuda:{}'.format(args.gpu))
         print('Using GPU')
@@ -222,7 +211,6 @@ if __name__ == '__main__':
         print(val_loss)
         print('>>>>>>>testing : {}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'.format(setting))
         exp.test(setting)
-        print("选择各自标准化并且我的归一化")
 
         if args.gpu_type == 'mps':
             torch.backends.mps.empty_cache()

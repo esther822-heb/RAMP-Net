@@ -36,9 +36,9 @@ This repository contains the official implementation of **RAMP-Net**, a novel re
 </p>
 
 
-[//]: # "*Figure 1: Overview of the RAMP-Net: framework.*"
+[//]: # "*Figure 2: Overview of the RAMP-Net: framework.*"
 <p align="center">
-  <em>Figure 1: Overview of the RAMP-Net framework.</em>
+  <em>Figure 2: Overview of the RAMP-Net framework.</em>
 </p>
 
 
@@ -60,6 +60,7 @@ This repository contains the official implementation of **RAMP-Net**, a novel re
 ```text
 ├── code/
 │   ├── data_provider/      # Data loading and preprocessing
+│   ├── docs/               # Store model schematic diagrams & experimental figures
 │   ├── exp/                # Training and evaluation pipelines
 │   ├── layers/             # Neural network building blocks
 │   ├── mask_rate/          # Missing-value mask files

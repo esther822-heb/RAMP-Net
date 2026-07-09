@@ -109,7 +109,16 @@ The processed datasets are stored in the data/ directory. Before running experim
 
 Training is performed using model-specific shell scripts. You can find all training scripts in the `code/scripts/` directory, organized by model name (e.g., `code/scripts/RAMP-Net/`).
 
-**Important:** You must navigate to the `code/` directory before executing these scripts to ensure the environment is correctly set up. To train a model, use the following commands:
+**Important:** You must navigate to the `code/` directory before executing these scripts to ensure the environment is correctly set up. 
+
+### Inference
+Inference uses the same shell scripts as training, all scripts are located in the `code/scripts/` directory. Simply change the parameter as follows:
+```bash
+# training mode
+--is_training 1
+
+# inference mode
+--is_training 0
 
 ## 📈 Experimental Results
 Bold: best model; italic: second-best model.

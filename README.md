@@ -112,14 +112,7 @@ Training is performed using model-specific shell scripts. You can find all train
 **Important:** You must navigate to the `code/` directory before executing these scripts to ensure the environment is correctly set up. 
 
 ### Inference
-Inference uses the same shell scripts as training. Simply change the parameter as follows:
-```bash
-# training mode
---is_training 1
-
-# inference mode
---is_training 0
-```
+Inference uses the same shell scripts as training, and you only need to change the parameter from ```--is_training 1``` to ```--is_training 0```
 
 ## 📈 Experimental Results
 Bold: best model; italic: second-best model.

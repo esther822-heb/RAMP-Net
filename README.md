@@ -119,6 +119,7 @@ Inference uses the same shell scripts as training, all scripts are located in th
 
 # inference mode
 --is_training 0
+```
 
 ## 📈 Experimental Results
 Bold: best model; italic: second-best model.
